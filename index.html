@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/012/066/505/original/sunny-and-rainy-day-weather-forecast-icon-meteorological-sign-3d-render-png.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+<body>
+    <div class="weather-app">
+        <form class="search-input" onsubmit="getWeather(event)">
+            <input type="text" id="city-input" class="city-input" placeholder="Enter City Name" required />
+            <button class="search-btn" type="submit">
+                <i class="material-icons">search</i>
+            </button>
+        </form>
+        <div class="city-date-section">
+            <h2 id="city-name" class="city">City</h2>
+            <span id="date" class="date">Date</span>
+        </div>
+        <div class="temp-info">
+            <div class="discription">
+                <i id="weather-icon" class="material-icons">sunny</i>
+                <span id="description" class="description-text">Description</span>
+            </div>
+            <div id="temperature" class="temp">Temperature</div>
+        </div>
+        <div class="additional-info">
+            <div class="wind-info">
+                <i style="font-size: 30px" class="material-icons">air</i>
+                <div style="margin-top: 10px">
+                    <h3 style="font-size: 20px" id="wind-speed" class="wind-speed">Wind Speed</h3>
+                    <p style="font-size: 15px; margin-top: 5px" class="wind-label">Wind</p>
+                </div>
+            </div>
+            <div class="humidity">
+                <i style="font-size: 30px" class="material-icons">water_drop</i>
+                <div style="margin-top: 3px">
+                    <h3 style="font-size: 20px" id="humidity" class="humidity">Humidity</h3>
+                    <p style="font-size: 16px; margin-top: -20px" class="humidity">Humidity</p>
+                </div>
+            </div>
+            <div class="visibilty-distance">
+                <i style="font-size: 30px; margin-top: -10px; margin-bottom: 8px" class="material-icons">visibility</i>
+                <div style="margin-top: 10px">
+                    <h3 style="font-size: 20px" id="visibility" class="visibility">Visibility</h3>
+                    <p style="font-size: 15px; margin-top: 5px" class="visibility">Visibility</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
